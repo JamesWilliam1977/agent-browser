@@ -1,0 +1,468 @@
+# Instincts generated from https://github.com/JamesWilliam1977/agent-browser
+# Generated: 2026-06-01T22:07:15.557Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: agent-browser-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 3 commits
+
+---
+id: agent-browser-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: agent-browser-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: agent-browser-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: agent-browser-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: agent-browser-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: agent-browser-workflow-update-documentation-and-references
+trigger: "when doing update documentation and references"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Workflow Update Documentation And References
+
+## Action
+
+Follow the update-documentation-and-references workflow:
+1. Edit or add .mdx files in docs/src/app/ to document features or update navigation.
+2. Update skill-data/core/SKILL.md and related references (e.g., commands.md, video-recording.md).
+3. Update README.md for high-level documentation.
+4. Optionally, update docs/src/lib/ for navigation or page titles.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/src/app/**/*.mdx, docs/src/app/**/*.tsx, docs/src/lib/docs-navigation.ts
+
+---
+id: agent-browser-workflow-feature-implementation-with-cli-and-docs-update
+trigger: "when doing feature implementation with cli and docs update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Workflow Feature Implementation With Cli And Docs Update
+
+## Action
+
+Follow the feature-implementation-with-cli-and-docs-update workflow:
+1. Modify or add Rust source files in cli/src/native/ and cli/src/output.rs for feature logic.
+2. Update or add tests in cli/src/native/e2e_tests.rs.
+3. Update documentation in docs/src/app/ and README.md.
+4. Update skill-data/core/SKILL.md and references as needed.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: cli/src/native/*.rs, cli/src/output.rs, cli/src/native/e2e_tests.rs
+
+---
+id: agent-browser-workflow-release-version-bump
+trigger: "when doing release version bump"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Workflow Release Version Bump
+
+## Action
+
+Follow the release-version-bump workflow:
+1. Update CHANGELOG.md with release notes.
+2. Bump version numbers in cli/Cargo.toml, cli/Cargo.lock, package.json, and packages/dashboard/package.json.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: CHANGELOG.md, cli/Cargo.toml, cli/Cargo.lock
+
+---
+id: agent-browser-instinct-camelcase-filenames
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Camelcase Filenames
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: agent-browser-instinct-camelcase-functions
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Camelcase Functions
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: agent-browser-instinct-pascalcase-classes
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Pascalcase Classes
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: agent-browser-instinct-screaming-constants
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Screaming Constants
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: agent-browser-instinct-alias-imports
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Alias Imports
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle: alias
+
+---
+id: agent-browser-instinct-mixed-exports
+trigger: "When exporting modules or symbols"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Mixed Exports
+
+## Action
+
+Use both named and default exports as appropriate
+
+## Evidence
+
+- Pattern in exportStyle: mixed
+
+---
+id: agent-browser-instinct-rust-cli-tests
+trigger: "When adding or updating CLI features in Rust"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Rust Cli Tests
+
+## Action
+
+Add or update tests in cli/src/native/e2e_tests.rs
+
+## Evidence
+
+- feature-implementation-with-cli-and-docs-update workflow
+- Pattern in files: cli/src/native/e2e_tests.rs
+
+---
+id: agent-browser-instinct-test-location-separate
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Test Location Separate
+
+## Action
+
+Place tests in separate test files or folders, not inline with source files
+
+## Evidence
+
+- architecture.testLocation: separate
+
+---
+id: agent-browser-instinct-commit-prefix-docs
+trigger: "When making a commit that updates documentation"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Commit Prefix Docs
+
+## Action
+
+Prefix the commit message with 'docs:'
+
+## Evidence
+
+- Commit example: docs: surface agent-browser feature coverage (#1403)
+
+---
+id: agent-browser-instinct-commit-prefix-chore
+trigger: "When making a commit for maintenance, release, or non-feature tasks"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Commit Prefix Chore
+
+## Action
+
+Prefix the commit message with 'chore:'
+
+## Evidence
+
+- Commit example: chore: prepare 0.27.1 release (#1405)
+
+---
+id: agent-browser-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, averaging around 39 characters
+
+## Evidence
+
+- commits.averageLength: 39
+
+---
+id: agent-browser-instinct-update-docs
+trigger: "When new features are added or documentation needs updating"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Update Docs
+
+## Action
+
+Edit or add .mdx files in docs/src/app/, update SKILL.md, references, and README.md
+
+## Evidence
+
+- update-documentation-and-references workflow
+- Commits like: docs: surface agent-browser feature coverage (#1403)
+
+---
+id: agent-browser-instinct-cli-feature-workflow
+trigger: "When implementing or changing a CLI/daemon feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Cli Feature Workflow
+
+## Action
+
+Modify Rust source files in cli/src/native/, update or add tests in cli/src/native/e2e_tests.rs, and update related documentation and references
+
+## Evidence
+
+- feature-implementation-with-cli-and-docs-update workflow
+
+---
+id: agent-browser-instinct-release-version-bump
+trigger: "When preparing a new release version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/agent-browser
+---
+
+# Agent Browser Instinct Release Version Bump
+
+## Action
+
+Update CHANGELOG.md and bump version numbers in cli/Cargo.toml, cli/Cargo.lock, package.json, and packages/dashboard/package.json
+
+## Evidence
+
+- release-version-bump workflow
+- Commit example: chore: prepare 0.27.1 release (#1405)
+
